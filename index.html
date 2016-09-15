@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<!--指定編碼為UTF-8-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--use bootstrap(?)-->
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--link css file-->
+		<!--
+		<link rel=stylesheet type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
+		-->
+		<!--link bootstrap css&js-->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/bootstrap.min.js"></script>
+		<title>
+			作業做了一半惹
+		</title>
+		<!--Bootstrap手持裝置相容-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="animated fadeIn row" bgcolor="#FFF" text="#000" >
+		<!--套用連結css-->
+		<div class="container">
+			<!--以下為內容-->
+			<div id="name" class="col-md-12 col-sm-12">我是君翰OuO<br></div>
+			<div class="col-md-6">
+				<img src="125664.png" id="emoticon" class="img-rounded"/><br>
+			</div>
+			<div id="edu" class="col-md-6">Educational background<br/>
+				<ul>
+					<li/>海大資工
+					<li/>板橋高中
+					<li/>江翠國中
+					<li/>莒光國小
+				</ul>
+			</div>
+			<div id="ConnectText" class="col-md-6">How to connect me?<br/>
+				<ul>
+					<li/>Send an e-mail to jasperlin1996@gmail.com
+					<li/>Push the facebook button and send me a messenge
+					<li/>Click the LINE botton and make friend with me
+					<li/>Or give me a phone call 0912989051
+				</ul>
+			</div>
+			<div id="somethingtosay" class="col-md-3">
+			好我終於做了一些惹
+			請大家多看看我寫的咚咚然後給我點建議(尤其是美學方面)
+			<a href="https://github.com/jasperlin1996/introduce/tree/gh-pages">
+			點這看原始碼:><br></a>
+			<a href="https://www.facebook.com/profile.php?id=100004758637871" target="_blank"><img src="logos/facebook_logo.png" id="facebook"/></a>
+			<a href="https://www.instagram.com/jasperlin1996/" target="_blank"><img src="logos/ig_logo.png" id="instagram"/></a>
+			<a href="https://twitter.com/jasperlin1996" target="_blank"><img src="logos/twitter_logo.png" id="twitter"/></a>
+			<a href="https://github.com/jasperlin1996" target="_blank"><img src="logos/github_logo.png" id="github"/></a>
+			<a href="" target="_blank"><img src="logos/line_logo.png" id="line"/></a>
+			</div>
+		</div>
+	<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+	<script>
+		$( "#name" ).click(function() {$('#name').addClass('animated fadeOutLeft');});
+		$( "#emoticon" ).click(function() {$('#emoticon').addClass('animated fadeOutLeft');});
+		$( "#somethingtosay" ).click(function(){$("#somethingtosay").addClass('animated fadeOutLeft');});
+		$( "#edu" ).click(function(){$("#edu").addClass('animated fadeOutRight');});
+		$( "#ConnectText" ).click(function(){$("#ConnectText").addClass('animated fadeOutRight');});
+	</script>
+	</body>
+</html>
