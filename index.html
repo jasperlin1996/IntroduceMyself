@@ -2,21 +2,23 @@
 <html lang="zh-TW">
 	<head>
 		<!--指定編碼為UTF-8-->
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<!--use bootstrap(?)-->
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!--link css file-->
-		<!--
-		<link rel=stylesheet type="text/css" href="index.css">
-		<link rel="stylesheet" type="text/css" href="animate.css">
-		-->
+
 		<!--link bootstrap css&js-->
-		<link rel="stylesheet" type="text/css" href="animate.css">
+
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<script src="js/bootstrap.min.js"></script>
+
+		<!--link css file-->
+
+		<link rel=stylesheet type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
+
 		<title>
-			作業做了一半惹
+			Basic Web Practicing
 		</title>
 		<!--Bootstrap手持裝置相容-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,24 +27,25 @@
 		<!--套用連結css-->
 		<div class="container">
 			<!--以下為內容-->
-			<div id="name" class="col-md-12 col-sm-12">我是君翰OuO<br></div>
+			<div id="name" class="col-md-12 col-sm-12 ">我是君翰 君翰是我<br></div>
 			<div class="col-md-6">
-				<img src="125664.png" id="emoticon" class="img-rounded"/><br>
+				<img src="emoticon/e01.png" id="emoticon01" class="img-rounded emoticon01_dis"/><br>
+				<img src="emoticon/e02.jpg" id="emoticon02" class="img-rounded emoticon02_dis"/><br>
+				<img src="emoticon/e03.png" id="emoticon03" class="img-rounded emoticon03_dis"/><br>
 			</div>
 			<div id="edu" class="col-md-6">Educational background<br/>
 				<ul>
-					<li/>海大資工
-					<li/>板橋高中
-					<li/>江翠國中
-					<li/>莒光國小
+					<p class="text-muted">海大資工</p>
+					<p class="text-muted">板橋高中</p>
+					<p class="text-muted">江翠國中</p>
+					<p class="text-muted">莒光國小</p>
 				</ul>
 			</div>
 			<div id="ConnectText" class="col-md-6">How to connect me?<br/>
 				<ul>
-					<li/>Send an e-mail to jasperlin1996@gmail.com
-					<li/>Push the facebook button and send me a messenge
-					<li/>Click the LINE botton and make friend with me
-					<li/>Or give me a phone call 0912989051
+					<p class="text-muted">Send an e-mail to jasperlin1996@gmail.com</p>
+					<p class="text-muted">Click the facebook button and send me a messenge</p>
+					<p class="text-muted">Or give me a phone call 0912989051</p>
 				</ul>
 			</div>
 			<div id="somethingtosay" class="col-md-3">
@@ -54,10 +57,11 @@
 			<a href="https://www.instagram.com/jasperlin1996/" target="_blank"><img src="logos/ig_logo.png" id="instagram"/></a>
 			<a href="https://twitter.com/jasperlin1996" target="_blank"><img src="logos/twitter_logo.png" id="twitter"/></a>
 			<a href="https://github.com/jasperlin1996" target="_blank"><img src="logos/github_logo.png" id="github"/></a>
-			<a href="" target="_blank"><img src="logos/line_logo.png" id="line"/></a>
 			</div>
 		</div>
+	<!--link jQuery-->
 	<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+	<!--
 	<script>
 		$( "#name" ).click(function() {$('#name').addClass('animated fadeOutLeft');});
 		$( "#emoticon" ).click(function() {$('#emoticon').addClass('animated fadeOutLeft');});
@@ -65,5 +69,23 @@
 		$( "#edu" ).click(function(){$("#edu").addClass('animated fadeOutRight');});
 		$( "#ConnectText" ).click(function(){$("#ConnectText").addClass('animated fadeOutRight');});
 	</script>
+	-->
+	<script>
+		$( "#emoticon01").click(function() {
+			$( "#emoticon01").addClass('animated fadeOutLeft').hide();
+			$( "#emoticon02").show().removeClass('animated fadeOutLeft').addClass('animated fadeInLeft');
+		});
+		$( "#emoticon02").click(function() {
+			$( "#emoticon02").addClass('animated fadeOutLeft').hide();
+			$( "#emoticon03").show().removeClass('animated fadeOutLeft').addClass('animated fadeInLeft');
+		});
+		$( "#emoticon03").click(function() {
+			$( "#emoticon03").addClass('animated fadeOutLeft').hide();
+			$( "#emoticon01").show().removeClass('animated fadeOutLeft').addClass('animated fadeInLeft');
+		});
+
+
+
+	</script>>
 	</body>
 </html>

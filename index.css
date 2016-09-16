@@ -1,0 +1,28 @@
+body{
+	font-family:Verdana;
+}
+#name{
+	font-size:30px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+#emoticon01,#emoticon02,#emoticon03{
+	width:300px;
+	height:300px;
+}
+.emoticon02_dis, .emoticon03_dis{
+	display:none;
+}
+#facebook, #twitter, #github, #line, #instagram{
+	width:40px;
+	height:40px;
+}
+#edu{
+	font-size:30px;
+}
+#ConnectText{
+	font-size:30px;
+}
+ul{
+	font-size:20px;
+}

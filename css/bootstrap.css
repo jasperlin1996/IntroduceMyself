@@ -5,36 +5,13 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: Microsoft JhengHei;
+  Font-family:Meiryo;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
   background-color: #fff;
-}
-#name{
-	float:left;
-	font-size:30px;
-	padding-bottom:20%
-	pedding-top:20%
-}
-#emoticon{
-	width:250px;
-	height:250px;
-}
-#facebook, #twitter, #github, #line, #instagram{
-	width:40px;
-	height:40px;
-}
-#edu{
-	font-size:30px;
-}
-#ConnectText{
-	font-size:30px;
-}
-ul{
-	font-size:20px;
 }
 article,
 aside,
