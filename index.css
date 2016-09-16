@@ -20,8 +20,12 @@ body{
 #edu{
 	font-size:30px;
 }
-#ConnectText{
+#ContactInfo{
 	font-size:30px;
+}
+#gmail_logo, #facebook_logo, #phone_logo{
+	width:40px;
+	height:40px;
 }
 ul{
 	font-size:20px;
