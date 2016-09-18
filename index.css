@@ -1,12 +1,12 @@
 body{
-	font-family:Verdana;
+	font-family:Verdana,Microsoft JhengHei;
 }
 #top{
 	font-size:30px;
 	margin-top:10px;
 	margin-bottom:20px;
 }
-#name{
+#name_title{
 	margin-top:0px;
 }
 #Name_font{
@@ -36,6 +36,12 @@ body{
 #gmail_logo, #facebook_logo, #phone_logo{
 	width:40px;
 	height:40px;
+}
+#close_button_about{
+	display:none;
+}
+#about p{
+	font-family:Microsoft JhengHei;
 }
 ul{
 	font-size:20px;
