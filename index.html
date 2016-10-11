@@ -7,6 +7,13 @@
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+		<!--link jQuery-->
+		<!--
+		<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+		-->
+		<!-- bootstrap requires jQuery by -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 		<!--link bootstrap css&js-->
 
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,7 +35,7 @@
 		<div class="container">
 			<!--以下為內容-->
 
-			<div id="top" class="col-md-12"><br></div>
+			<div id="top" class="col-md-12"><br><br></div>
 
 			<!--頭貼們-->
 			<div id="emoticon" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
@@ -36,15 +43,16 @@
 				<img src="emoticon/e02.jpg" id="emoticon02" class="img-circle emoticon02_dis"/><br>
 				<img src="emoticon/e03.png" id="emoticon03" class="img-circle emoticon03_dis"/><br>
 			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " ></div> <!--這行東西好像莫名其妙可以排版-->
 
 			<!--Name-->
-			<div id="name" class="col-md-6">
+			<div id="name" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<h2 id="name_title" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Name</h2>
 				<div id="Name_font" class="text-muted">
-				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">Chinese:</div>
-				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">林君翰</div>
-				<div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">English:</div>
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Chun-Han Lin</div>
+				<div id="01" class="col-xs-6 col-sm-6 col-md-3 col-lg-3">Chinese:</div>
+				<div id="02" class="col-xs-6 col-sm-6 col-md-3 col-lg-3">林君翰</div>
+				<div id="03" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">English:</div>
+				<div id="04" class="col-xs-6 col-sm-6 col-md-4 col-lg-4">Chun-Han Lin</div>
 				</div>
 			</div>
 
@@ -53,7 +61,7 @@
 				<h2 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Interest</h2>
 				<div id="Interest_font">
 					<ul>
-						<p class="text-muted">彈鋼琴 玩音樂</p>
+						<p class="text-muted">彈鋼琴 玩音樂 coding(?) 修bug(幫自己QQ)</p>
 					</ul>
 				</div>
 			</div>
@@ -107,8 +115,7 @@
 			<a href="https://github.com/jasperlin1996" target="_blank"><img src="logos/github_logo.png" id="github"/></a>
 			</div>
 		</div>
-	<!--link jQuery-->
-	<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+
 
 	<script>
 		$(function(){
@@ -148,9 +155,9 @@
 			var animationInLeft = "animated fadeInLeft";
 			var animationInRight = "animated fadeInRight";
 
-			var fontSize01 = parseInt($(" #about").css("font-size"));
+			var fontSize01 = parseInt($("#about").css("font-size"));
 			fontSize01 = fontSize01 + 30 + "px";
-			var fontSize02 = parseInt($(" #about").css("font-size"));
+			var fontSize02 = parseInt($("#about").css("font-size"));
 			fontSize02 = fontSize02 + 0 + "px";
 			$( "#about").one('click', function(){											//col-md-6 col-lg-6  col-md-10 col-lg-10
 				$( "#emoticon").addClass(animationOutLeft).one(animationEnd, function(){
@@ -158,6 +165,7 @@
 				});
 				$( "#name").addClass(animationOutRight).one(animationEnd, function(){
 					$( "#name").hide().removeClass(animationOutRight);
+
 				});
 				$( "#interest").addClass(animationOutRight).one(animationEnd, function(){
 					$( "#interest").hide().removeClass(animationOutRight);
@@ -182,9 +190,11 @@
 								$( "#about").css({'font-size':fontSize02});
 								$( "#emoticon").show().addClass(animationInLeft).one(animationEnd, function(){
 									$( "#emoticon").removeClass(animationInLeft);
+									$( "#emoticon").show();
 								});
 								$( "#about").show().addClass(animationInLeft).one(animationEnd, function(){
 									$( "#about").removeClass(animationInLeft);
+									$( "#about").show();
 								});
 								$( "#name").show().addClass(animationInRight).one(animationEnd, function(){
 									$( "#name").removeClass(animationInRight);
