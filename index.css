@@ -46,3 +46,7 @@ body{
 ul{
 	font-size:20px;
 }
+#01,#02,#03,#04{
+	position:fixed;
+	
+}
