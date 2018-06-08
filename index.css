@@ -23,7 +23,7 @@ body{
 	width:300px;
 	height:300px;
 }
-.emoticon02_dis, .emoticon03_dis{
+.emoticon02_dis, .emoticon03_dis, .certificates02_dis, .certificates02_dis, .certificates03_dis{
 	display:none;
 }
 #facebook, #twitter, #github, #line, #instagram{
@@ -49,8 +49,6 @@ ul{
 #01{
 	position:fixed;
 }
-
-
 
 .make-ol-lefter{
 	-webkit-padding-start:0px;

@@ -18,6 +18,7 @@ $(function(){
     emoticonAnimate("#emoticon02", "#emoticon03");
     emoticonAnimate("#emoticon03", "#emoticon01");
 
+    
     /* #emoticon, #about/ #name, #skills, #edu, #contact/#links */
     var animationOutLeft = "animated fadeOutLeft";
     var animationOutRight = "animated fadeOutRight";
@@ -56,38 +57,59 @@ $(function(){
     }
 
     $( "#about").on('click', function(){											//col-md-6 col-lg-6  col-md-10 col-lg-10
-        if(about_status === 0){
-            about_status = 1;
-            hideClassLeft("#emoticon");
-            hideClassRight("#name");
-            hideClassLeft("#skills");
-            hideClassRight("#edu");
-            hideClassRight("#contact");
-            hideClassRight("#links");
-            $( "#about").addClass(animationZoomOut).one(animationEnd, function(){
-                $( "#about").css({'font-size':fontSize01});
-                $( "#about").removeClass(animationZoomOut).addClass("animated fadeIn").removeClass("col-md-6 col-lg-6").addClass("	col-md-12 col-lg-12").one(animationEnd, function(){
-                    $( "#close_button_about").show();
-                    $( "#close_button_about").one('click', function(){
-                        $( "#close_button_about").hide();
-                        $( "#about").removeClass("animated fadeIn").addClass("animated zoomOutDown").one(animationEnd, function(){
-                            $( "#about").removeClass("col-md-12 col-lg-12").addClass("col-md-6 col-lg-6").removeClass("animated zoomOutDown");
-                            $( "#about").css({'font-size':fontSize02});
+        hideClassLeft("#emoticon");
+        hideClassRight("#name");
+        hideClassLeft("#skills");
+        hideClassRight("#edu");
+        hideClassRight("#contact");
+        hideClassRight("#links");
+        $( "#about").addClass(animationZoomOut).one(animationEnd, function(){
+
+            $( "#about").removeClass(animationZoomOut).hide();
+            $( "#RWD_STYLE").hide();
+            $( "#close_button_about").show();
+            $( "#certificates").show().addClass("animated fadeIn").addClass("col-xs-12 col-sm-12 col-md-12 col-lg-12").one(animationEnd, function(){
+                $( "#certificates").removeClass("animated fadeIn");
+                
+                $( "#close_button_about").unbind('click').one('click', function(){
+                    $( "#close_button_about").hide(function(){
+                        
+                        $( "#certificates").addClass("animated zoomOutDown").one(animationEnd, function(){
+                            $("#close_button_about").hide();
+                            $( "#certificates").removeClass("col-xs-12 col-sm-12 col-md-12 col-lg-12").hide().removeClass("animated zoomOutDown");
                             animateLeft("#emoticon", 1);
                             animateLeft("#about", 1);
                             animateRight("#name", 0);
                             animateLeft("#skills", 0);
                             animateRight("#edu", 0);
                             animateRight("#contact", 0);
-                            $( "#links").show().addClass(animationInRight).one(animationEnd, function(){
-                                $( "#links").removeClass(animationInRight);
-                                about_status = 0;
-                            });
-                        });
+                            animateRight("#links", 0);
+                            $( "#RWD_STYLE").show();
+                            console.log('inside');
+                        }); 
                     });
+                    console.log("outside");
+                    
+                }); 
+            });
+        });
+    });
+
+    function certificateAnimate(pre, next){
+        $(pre).unbind('click').on('click',function() {
+            console.log(pre)
+            $(pre).addClass(animationOut).one(animationEnd, function(){
+                $(pre).hide().removeClass(animationOut);
+                $(next).show().addClass("animated fadeInRight").one(animationEnd, function(){
+                    console.log(next)
+                    $(next).removeClass("animated fadeInRight");
                 });
             });
-        }
-    });
+        });
+    }
+    
+    certificateAnimate("#certificate01", "#certificate02");
+    certificateAnimate("#certificate02", "#certificate01");
+    certificateAnimate("#certificate03", "#certificate01");
 
 });	
