@@ -37,10 +37,10 @@ body{
 	width:40px;
 	height:40px;
 }
-#close_button_about{
+#close_button_exp{
 	display:none;
 }
-#about p{
+#exp p{
 	font-family:Microsoft JhengHei;
 }
 ul{
