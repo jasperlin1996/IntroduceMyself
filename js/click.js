@@ -105,7 +105,4 @@ $(function(){
     
     certificateAnimate("#certificate01", "#certificate02");
     certificateAnimate("#certificate02", "#certificate01");
-    certificateAnimate("#certificate03", "#certificate01");
-
-
 });	
